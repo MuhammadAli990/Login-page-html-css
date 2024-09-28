@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(14, 13, 13);
+    color: white;
+    display: flex;
+}
+.bg{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    width: 430px;
+    height: 400px;
+}
+.bg .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    animation: moveUpDown 5s ease-in-out infinite;
+}
+.shape:first-child{
+    background: linear-gradient(#0823d3,#9113ff);
+    left: -110px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(to right,#ffee2f,#f07619);
+    right: -110px;
+    bottom: -80px;
+}
+@keyframes moveUpDown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+form{
+    height: 460px;
+    width: 340px;
+    background-color: rgba(255, 255, 255, 0.126);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.205);
+    padding: 20px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+form *{
+    outline: none;
+    border: none;
+}
+h1{
+    font-weight: 500;
+    text-align: center;
+    font-size: 2.7rem;
+}
+label{
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: block;
+}
+
+input{
+    width: 98%;
+    padding: 10px 6px;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,0.07);
+    color:white;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    font-size: 1rem;
+}
+input::placeholder{
+    color: white;
+    font-size: 1rem;
+}
+
+.login-btn{
+    width: 100%;
+    background-color: white;
+    color: #080710;
+    padding: 4px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 74px;
+    transition-duration:200ms ;
+}
+.login-btn:hover{
+    background-color: rgb(235, 232, 232);
+}
+
+.signup-btn{
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.479);
+    padding: 7px 0;
+    font-size: 1rem;
+    color: white;
+}
+
+a{
+    color: rgb(249, 225, 68);
+    transition-duration: 200ms;
+}
+a:hover{
+    color: rgb(229, 212, 100);
+}
+
+
+@media screen and (max-width:670px) {
+    .shape:first-child{
+        left: -50px;
+        top: -140px;
+    }
+    .shape:last-child{
+        right: -50px;
+        bottom: -140px;
+    }
+}
+
+@media screen and (max-width:525px){
+    form{
+        width: 270px;
+    }
+    .shape:first-child{
+        left: 30px;
+        top: -170px;
+    }
+    .shape:last-child{
+        right: 30px;
+        bottom: -210px;
+    }
+}
